@@ -17,7 +17,7 @@ function Individual() {
         setContact(contacts[Number(id)])
     }, [contacts, id])
     
-    console.log(contact)
+    
 
     return (
         <main className="contact">

@@ -18,6 +18,12 @@ function NewContact() {
       city: "",
     }); 
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setContacts([...contacts, formData]);
+    navigate("/contacts");
+  };
+
   
  
   
@@ -61,15 +67,14 @@ function NewContact() {
           <label
               >Street:<input
               type="text"
-              name="username"
+              name="street"
               value={formData.street}
               onChange={(e) => setFormData({ ...formData, street: e.target.value })}
               />
               
           </label>
           
-          <input className="form__submit" type="submit" value="Submit Survey!" onClick={() => {setContacts({...contacts, formData}) 
-            navigate("/contacts")}}/>
+          <input className="form__submit" type="submit" value="Submit Survey!" onClick={handleSubmit}/>
       </form>
     )
 }

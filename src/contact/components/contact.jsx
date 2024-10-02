@@ -2,6 +2,8 @@
 function Contact(contact) {
   contact=contact.contact
 
+  
+
   if (!contact) return <p>Loading...</p>
   return (
     <div>
